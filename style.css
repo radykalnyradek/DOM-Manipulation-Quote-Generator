@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: url(background.png) no-repeat center center / cover;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 150px 1fr;
+  grid-template-areas:
+    "header"
+    "main";
+  justify-content: center;
+  margin: auto 20px;
+}
+
+.header {
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.2rem;
+  border: solid 2px #fff;
+  color: #fff;
+  background-color: #262626;
+  padding: 5px;
+  width: 100%;
+  margin: 30px auto;
+  border-radius: 5px;
+}
+
+.main-content {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 50px 40px;
+  box-shadow: 0 0 10px;
+}
+
+.main-content .text-area {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.main-content .person {
+  font-size: 1.6rem;
+  color: red;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+.button-area button {
+  background-color: #262626;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 10px 15px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.button-area button:active {
+  background-color: lightblue;
+}
+
+@media (min-width: 768px) {
+  .header {
+    width: 500px;
+  }
+
+  .main-content {
+    width: 600px;
+    margin: auto;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    grid-template-columns: 150px 1fr;
+    grid-template-rows: 150px 1fr;
+    grid-template-areas:
+      "header main"
+      "header main";
+    width: 750px;
+    margin: 100px auto;
+  }
+
+  .header {
+    display: block;
+    text-transform: uppercase;
+    height: 100%;
+    width: 140px;
+    padding: 49px;
+    font-size: 18px;
+    line-height: 1.2;
+    text-align: center;
+    margin: 0;
+    word-wrap: break-word;
+  }
+
+  .main-content {
+    width: 100%;
+    margin: auto;
+  }
+}
